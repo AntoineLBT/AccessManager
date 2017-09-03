@@ -1,0 +1,16 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - Access Manager</title>
+    {% else %}
+    <title> Welcome on the Access Manager </title>
+    {% endif %}
+  </head>
+  <body>
+    <div>
+      AccessManager: <a href="/index">Index</a>
+    </div>
+    <hr />
+    {% block content %}{% endblock %}
+  </body>
+</html>

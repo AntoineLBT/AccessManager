@@ -1,13 +1,5 @@
-<html>
-
-  <head>
-    {% if title %}
-    <title> {{ title }} - AccessManager</title>
-    {% else %}
-    <title> AccessManager</title>
-    {% endif %}
-    </head>
-  <body>
+{% extends "base.html" %}
+{% block content %}
     <h1>Hello, {{ user.nickname}} {{user.name}}!</h1>
     {% for post in posts %}
     <div>
@@ -16,5 +8,4 @@
       </p>
     </div>
     {% endfor %}
-  </body>
-</html>
+{% endblock %}
