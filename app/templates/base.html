@@ -1,26 +1,22 @@
 <html>
   <head>
     {% if title %}
-    <title>{{ title }} - Access Manager</title>
+    <title>{{ title }} - microblog</title>
     {% else %}
-    <title> Welcome on the Access Manager </title>
+    <title>microblog</title>
     {% endif %}
   </head>
   <body>
-    <div>
-      AccessManager: <a href="/index">Index</a>
-    </div>
-    <hr />
+    <div>Microblog: <a href="/index">Home</a></div>
+    <hr>
     {% with messages = get_flashed_messages() %}
-       {% if messages %}
-       <ul>
-         {% for message in messages %}
-            <li>
-              {{ message }}
-            </li>
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }} </li>
         {% endfor %}
-       </ul>
-       {% endif %}
+        </ul>
+      {% endif %}
     {% endwith %}
     {% block content %}{% endblock %}
   </body>
